@@ -1,0 +1,110 @@
+{
+  "theme": "LIGHT",
+  "archetype": "4 (Swiss & High-Contrast)",
+  "vibe": "Premium consulting firm + modern learning organization, minimalistic, elegant whitespace, strong typography, infographic-driven",
+  "typography": {
+    "heading_font": "Cabinet Grotesk",
+    "body_font": "IBM Plex Sans",
+    "accent_font": "IBM Plex Mono",
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl tracking-tighter font-black",
+      "h2": "text-3xl sm:text-4xl tracking-tight font-bold",
+      "h3": "text-xl sm:text-2xl font-bold",
+      "body": "text-base leading-relaxed",
+      "overline": "text-xs tracking-[0.2em] uppercase font-bold font-mono"
+    }
+  },
+  "colors": {
+    "primary": "#0F172A",
+    "secondary": "#F8FAFC",
+    "accent": "#B45309",
+    "background": "#FFFFFF",
+    "surface": "#F1F5F9",
+    "text_main": "#0F172A",
+    "text_muted": "#64748B",
+    "border": "#E2E8F0"
+  },
+  "spacing_and_layout": {
+    "container_padding": "px-6 md:px-12 lg:px-24",
+    "section_spacing": "py-24 md:py-32",
+    "grid_system": "Bento Grid Protocol (Mode A for Marketing, Mode B for Data/Frameworks)",
+    "corners": "rounded-none md:rounded-sm",
+    "alignment": "Left-aligned for textual data, asymmetrical grids for visual tension"
+  },
+  "components": {
+    "buttons": "Flat solid colors, sharp edges or 2px radius, heavy hover transitions (-translate-y-1, darker color). No pill shapes.",
+    "cards": "Cardless or 1px solid border with subtle ambient shadow. Infographic style with strict grid adherence.",
+    "navigation": "Crystal glassmorphism (backdrop-blur-xl bg-white/70) or solid white with 1px bottom border. Must include logo, 4 links, and primary CTA.",
+    "framework_visuals": "SVG-based infographic flows. 1px connecting lines, monospace labels.",
+    "forms": "Shadcn heavily customized. Square inputs, focus:ring-1 focus:ring-primary, minimal borders."
+  },
+  "motion_and_interactions": {
+    "scroll": "Lenis smooth scrolling for premium weight",
+    "hover": "Subtle translation (-translate-y-1) and high-contrast text color changes",
+    "entrance": "Staggered fade-up (Framer Motion) for F.L.I.G.H.T pillars and timelines"
+  },
+  "pages_and_sections": {
+    "home": {
+      "hero": "Typography-led. Large Cabinet Grotesk headline 'Developing Leaders. Transforming Teams. Elevating Organizations.' Dark transparent overlay (bg-black/40) over the glass building image. Dual CTA (Solid Bronze for primary, Outline for secondary).",
+      "business_challenges": "Bento grid of challenges leading to interventions. Monospace numbering (01, 02).",
+      "client_journey": "Horizontal scroll or sticky-timeline for Discover->Diagnose->Design->Deliver->Sustain.",
+      "testimonials": "Minimalist carousel (Swiper) or staggered grid. Large quotes, attribution in IBM Plex Mono."
+    },
+    "about_flight": {
+      "methodology": "Interactive accordion or scroll-spy section for F, L, I, G, H, T. Each letter massive (text-[10vw]) on the left/background, with readable content overlaid.",
+      "three_pillars": "Develop Self / Team / Org. 3-column dense grid with distinct hover states revealing program metrics."
+    },
+    "signature_programs": {
+      "display": "List view rather than cards. High-contrast data rows (infographic style) showing duration, target audience, and outcome."
+    },
+    "cms_admin": {
+      "layout": "Control Room Grid (tight gaps, efficient density).",
+      "style": "Swiss functional. White background, gray borders, high data density."
+    }
+  },
+  "media": {
+    "logos": [
+      {
+        "category": "brand_logo_main",
+        "url": "https://borninflight.com/wp-content/uploads/2021/02/Born-in-Flight-logo.png",
+        "description": "Born in Flight Original Colored Logo"
+      },
+      {
+        "category": "brand_logo_white",
+        "url": "https://borninflight.com/wp-content/uploads/2021/03/Born-In-Flight-LogoHoriz_White-2.png",
+        "description": "Born in Flight White Logo"
+      }
+    ],
+    "images": [
+      {
+        "category": "hero_background",
+        "url": "https://images.unsplash.com/photo-1621831337128-35676ca30868?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBjb3Jwb3JhdGUlMjBnbGFzcyUyMGJ1aWxkaW5nfGVufDB8fHx8MTc4MTQxNjE4OHww&ixlib=rb-4.1.0&q=85",
+        "description": "Modern glass building, represents organizational elevation"
+      },
+      {
+        "category": "framework_pillars",
+        "url": "https://images.unsplash.com/photo-1531972111231-7482a960e109?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBjb3Jwb3JhdGUlMjBnbGFzcyUyMGJ1aWxkaW5nfGVufDB8fHx8MTc4MTQxNjE4OHww&ixlib=rb-4.1.0&q=85",
+        "description": "Clear glass interior architecture for structural pillars"
+      },
+      {
+        "category": "team_workshop",
+        "url": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1ODB8MHwxfHNlYXJjaHwyfHxleGVjdXRpdmUlMjB0ZWFtJTIwbWVldGluZ3xlbnwwfHx8fDE3ODE0MTYxODl8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Executive team meeting representing Develop Team pillar"
+      }
+    ],
+    "icons_library": "@phosphor-icons/react"
+  },
+  "testing": {
+    "attributes": "All interactive and key informational elements MUST include a data-testid attribute (kebab-case, role-based)."
+  },
+  "instructions_to_main_agent": [
+    "Install required fonts from Google Fonts: Cabinet Grotesk (if available or use Clash Display/Satoshi), IBM Plex Sans, IBM Plex Mono.",
+    "Install @phosphor-icons/react for iconography.",
+    "Use standard Tailwind classes but avoid any generic Vercel/Stripe component look.",
+    "Do NOT use standard Shadcn Cards with rounded corners and soft shadows for the marketing pages. Use sharp 1px bordered divs with pure HTML/Tailwind.",
+    "Implement the 'Client Engagement Journey' as an infographic timeline, not just standard cards.",
+    "F.L.I.G.H.T methodology should be highly visual, leveraging massive typography and tight spacing.",
+    "Ensure hover states explicitly declare text colors to maintain contrast.",
+    "Use pure JSON object without Markdown code blocks."
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "summary": "Iteration 2 validation of the Born In Flight v2-2026-01 content refresh. Backend pytest suite (21 tests) and frontend Playwright e2e (Home/About/Programs/Framework/Success Stories/Media/Contact) all pass against REACT_APP_BACKEND_URL=https://transform-bif.preview.emergentagent.com. Backend confirms: 27 programs (9 self / 9 team / 9 organization) with the new simplified shape {id, pillar, name, description}, 12 testimonials with all expected authors, POST /api/leads now returns 201, EmailStr validation enforced, admin-protected endpoints reject without X-Admin-Token, admin CRUD for programs (new shape) and testimonials persists correctly. Frontend confirms: hero headline + tagline + 100k+ / 12+ stats + Arc 'invest in results' copy on Home, 12 testimonial carousel dots, all 7 nav links, About page (Himalayan bird, Change/Breakthrough/Transformation, 12+/100k+/12+/93% stats, Prakash Rao with prakirao LinkedIn, Featured Book 'Go On — Become the Athlete Within'), Programs page (8 principles incl. 'Tailored, Not Templated', filter-all/self/team/organization, 27 rows default and 9 on self filter), Framework pillar buttons render correct programs, Success Stories page with all 6 case-* testids and Business Challenge / Our Solution / Business Impact blocks, Media page with all 5 feature testids and 4 social testids, Contact page with correct headlines, +91 80 4394 3531, 560079 address, info@borninflight.com, Google Maps iframe, interest dropdown with 'NLP Certification' and 'Assessment & Development Centers', form submission shows 'Message received.' success state.",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [
+    "/app/backend/tests/backend_test.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "backend/server.py uses meta.seed_version flag to gate reseed — safe and idempotent across deploys. Good.",
+    "Program model is now strictly {id, pillar, name, description}; PUT /api/programs/{id} validates via Pydantic and forces id from path, preventing drift. Good.",
+    "Pydantic EmailStr enforced on /api/leads with 422 on invalid; 201 on create now follows REST convention.",
+    "Mongo _id correctly excluded via projection {'_id': 0} on all list endpoints.",
+    "CORS still uses wildcard from env default; acceptable for preview, but restrict in production.",
+    "ADMIN_TOKEN has a hardcoded fallback 'flight-admin-2026' — fine for MVP, rotate via env in prod.",
+    "Frontend pages all carry comprehensive data-testid coverage; substring scans show every required content needle is present (note: tests must allow for spans inside copy — e.g., 'Tailored, Not Templated' has a comma, 'invest in results' and 'Every Transformation Starts With a Conversation' contain inline <span> wrappers)."
+  ],
+  "updated_files": [
+    "/app/backend/tests/backend_test.py"
+  ],
+  "success_rate": {"backend": "100% (21/21)", "frontend": "100% (all critical flows verified across 7 pages)"},
+  "test_credentials": "Admin token: flight-admin-2026 (sent via X-Admin-Token header or POST /api/admin/login {token}). /app/memory/test_credentials.md not present — flagging for the team.",
+  "seed_data_creation": "Auto-seeded on first startup with SEED_VERSION='v2-2026-01': 27 programs, 12 testimonials. Tests created+cleaned ephemeral TEST_prog_* and TEST_t_* records; test leads (test_user_v2@example.com, leadlist_v2@test.com, playwright_v2@example.com) intentionally left in DB for admin Leads tab visual checks.",
+  "retest_needed": false,
+  "should_main_agent_self_test": false,
+  "context_for_next_testing_agent": "Backend tests at /app/backend/tests/backend_test.py — invoke with REACT_APP_BACKEND_URL exported (the test reads os.environ['REACT_APP_BACKEND_URL'] strictly). All 21 cases pass on the public preview URL. Program shape is now strictly {id, pillar, name, description}; do not assert audience/formats/duration/outcomes anymore. Testimonials count is 12. Frontend data-testids in use: nav-link-{home|about|framework|programs|success-stories|media|contact}, testimonial-dot-{0..11}, filter-{all|self|team|organization}, pillar-btn-{self|team|organization}, case-{self|team|org}-{1|2}, media-{asia-business-outlook|vygr-founder-life|vygr-brand-story|world-hrd-congress|digital-revolution-seminar}, social-{linkedin|youtube|instagram|facebook}, contact-{name|email-input|message|submit|success|phone|address|map|email|interest}, admin-* (unchanged from iteration 1).",
+  "rca of the issue": "N/A — no failures encountered. Three initial Playwright substring-match warnings (invest in results / Tailored Not Templated / Every Transformation Starts With a Conversation) were false positives caused by inline <span> wrappers and a comma in the source; the rendered UI contains all the required copy verbatim (verified via grep on source and the captured screenshot)."
+}

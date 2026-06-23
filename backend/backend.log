@@ -1,0 +1,42 @@
+INFO:     127.0.0.1:65375 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63205 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:63205 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60838 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57090 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57090 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54125 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55377 - "GET /api/testimonials HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55377 - "GET /api/testimonials HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50100 - "GET /api/programs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62201 - "GET /api/programs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62201 - "GET /api/programs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50100 - "GET /api/programs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65469 - "OPTIONS /api/leads HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65469 - "POST /api/leads HTTP/1.1" 201 Created
+INFO:     127.0.0.1:62324 - "GET /api/programs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62324 - "GET /api/programs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62324 - "GET /api/programs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53968 - "GET /api/programs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61435 - "GET /api/testimonials HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61435 - "GET /api/testimonials HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53024 - "GET /api/testimonials HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53024 - "GET /api/testimonials HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54641 - "OPTIONS /api/admin/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54641 - "POST /api/admin/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54641 - "OPTIONS /api/leads HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54641 - "OPTIONS /api/leads HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54641 - "GET /api/leads HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54641 - "GET /api/leads HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54641 - "GET /api/leads HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52891 - "GET /api/programs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59094 - "GET /api/programs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51156 - "GET /api/testimonials HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55110 - "GET /api/testimonials HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET /api/programs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET /api/programs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58245 - "GET /api/testimonials HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54529 - "GET /api/testimonials HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57120 - "GET /api/testimonials HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57120 - "GET /api/testimonials HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59104 - "GET /api/testimonials HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53600 - "GET /api/testimonials HTTP/1.1" 200 OK

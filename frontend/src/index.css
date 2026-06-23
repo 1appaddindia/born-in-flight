@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --bif-ink: #0B1220;
+    --bif-paper: #F6F3EC;
+    --bif-cream: #EFE9DC;
+    --bif-bronze: #B45309;
+    --bif-bronze-deep: #8C3D04;
+    --bif-rule: #1f2937;
+    --bif-muted: #5B6472;
+    --bif-line: #DCD3C0;
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+    margin: 0;
+    background: var(--bif-paper);
+    color: var(--bif-ink);
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+}
+
+::selection {
+    background: var(--bif-ink);
+    color: var(--bif-paper);
+}
+
+.font-display { font-family: 'Bricolage Grotesque', serif; letter-spacing: -0.02em; }
+.font-serif-display { font-family: 'Fraunces', serif; letter-spacing: -0.015em; }
+.font-mono { font-family: 'IBM Plex Mono', monospace; }
+.font-body { font-family: 'IBM Plex Sans', sans-serif; }
+
+.overline {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.hairline { border-color: var(--bif-line); }
+.rule-ink { border-color: var(--bif-ink); }
+
+/* Buttons */
+.btn-primary {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--bif-ink); color: var(--bif-paper);
+    padding: 0.95rem 1.4rem; font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase; letter-spacing: 0.18em; font-size: 11px; font-weight: 600;
+    border: 1px solid var(--bif-ink);
+    transition: transform .25s ease, background-color .25s ease, color .25s ease;
+}
+.btn-primary:hover { transform: translateY(-2px); background: var(--bif-bronze); border-color: var(--bif-bronze); color: #fff; }
+.btn-outline {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: transparent; color: var(--bif-ink);
+    padding: 0.95rem 1.4rem; font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase; letter-spacing: 0.18em; font-size: 11px; font-weight: 600;
+    border: 1px solid var(--bif-ink);
+    transition: transform .25s ease, background-color .25s ease, color .25s ease;
+}
+.btn-outline:hover { transform: translateY(-2px); background: var(--bif-ink); color: var(--bif-paper); }
+.btn-ghost {
+    display: inline-flex; align-items: center; gap: 0.45rem;
+    font-family: 'IBM Plex Mono', monospace; text-transform: uppercase;
+    letter-spacing: 0.18em; font-size: 11px; font-weight: 600; color: var(--bif-ink);
+    border-bottom: 1px solid var(--bif-ink); padding-bottom: 2px;
+    transition: color .2s, border-color .2s;
+}
+.btn-ghost:hover { color: var(--bif-bronze); border-color: var(--bif-bronze); }
+
+/* Grain texture overlay */
+.grain::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    opacity: .6; mix-blend-mode: multiply;
+}
+
+.dot { width: 6px; height: 6px; background: var(--bif-bronze); display: inline-block; }
+
+.divider-line { height: 1px; background: var(--bif-line); }
+
+input, textarea, select {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.input {
+    width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--bif-ink);
+    padding: 0.85rem 0; font-size: 1rem; outline: none; color: var(--bif-ink);
+    transition: border-color .2s;
+}
+.input:focus { border-color: var(--bif-bronze); }
+.input::placeholder { color: #9aa1ad; }
+
+.scrollbar-thin::-webkit-scrollbar { height: 6px; width: 6px; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: var(--bif-ink); }
+
+@layer base {
+    :root {
+        --background: 44 33% 95%;
+        --foreground: 222 30% 9%;
+        --card: 0 0% 100%;
+        --card-foreground: 222 30% 9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222 30% 9%;
+        --primary: 222 30% 9%;
+        --primary-foreground: 44 33% 95%;
+        --secondary: 40 28% 92%;
+        --secondary-foreground: 222 30% 9%;
+        --muted: 40 28% 92%;
+        --muted-foreground: 215 15% 40%;
+        --accent: 28 92% 36%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 38 25% 82%;
+        --input: 38 25% 82%;
+        --ring: 28 92% 36%;
+        --radius: 0.125rem;
+    }
+}
+
+@layer base {
+    * { @apply border-border; }
+}

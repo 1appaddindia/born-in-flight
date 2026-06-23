@@ -1,0 +1,5 @@
+INFO:     Started server process [184]
+INFO:     Waiting for application startup.
+2026-06-23 12:43:57,985 - server - INFO - Born In Flight API ready · seed=v2-2026-01
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
