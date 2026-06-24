@@ -2,7 +2,7 @@ import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 
-const LOGO = "/images/born-in-flight-logo.svg";
+const LOGO = "/images/Born-in-Flight-logo.png";
 
 const NAV = [
   { to: "/", label: "Home" },
