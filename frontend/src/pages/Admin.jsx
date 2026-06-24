@@ -4,7 +4,7 @@ import { toast } from "sonner";
 import { ArrowUpRight, LogOut, Save, Trash2, Plus } from "lucide-react";
 import { api, adminApi } from "@/lib/api";
 
-const LOGO = "https://borninflight.com/wp-content/uploads/2021/02/Born-in-Flight-logo.png";
+const LOGO = "/images/born-in-flight-logo.svg";
 
 export default function Admin() {
   const [token, setToken] = useState(localStorage.getItem("bif_admin_token") || "");

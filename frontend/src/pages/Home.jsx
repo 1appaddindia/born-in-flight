@@ -5,7 +5,7 @@ import { api } from "@/lib/api";
 import EngagementInfographic from "@/components/EngagementInfographic";
 import DifferenceInfographic from "@/components/DifferenceInfographic";
 
-const HERO_IMG = "https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=1800&q=80";
+const HERO_IMG = "/images/leadership-hero.jpg";
 
 const CHALLENGES = [
   "Low leadership effectiveness",
@@ -58,14 +58,14 @@ const JOURNEY = [
 ];
 
 const CLIENT_LOGOS = [
-  { src: "https://borninflight.com/wp-content/uploads/2021/02/Deloitte.png", alt: "Deloitte" },
-  { src: "https://borninflight.com/wp-content/uploads/2021/02/Bosch.png", alt: "Bosch" },
-  { src: "https://borninflight.com/wp-content/uploads/2021/02/sap.png", alt: "SAP" },
-  { src: "https://borninflight.com/wp-content/uploads/2021/02/tata-motors.png", alt: "Tata Motors" },
-  { src: "https://borninflight.com/wp-content/uploads/2021/02/zeiss.png", alt: "Carl Zeiss" },
-  { src: "https://borninflight.com/wp-content/uploads/2024/03/Lowes-logo.png", alt: "Lowe's" },
-  { src: "https://borninflight.com/wp-content/uploads/2024/03/Paloalto-networks-logo.webp", alt: "Palo Alto" },
-  { src: "https://borninflight.com/wp-content/uploads/2024/03/Nippon-India-logo.png", alt: "Nippon India" },
+  { src: "/images/client-deloitte.svg", alt: "Deloitte" },
+  { src: "/images/client-bosch.svg", alt: "Bosch" },
+  { src: "/images/client-sap.svg", alt: "SAP" },
+  { src: "/images/client-tata-motors.svg", alt: "Tata Motors" },
+  { src: "/images/client-zeiss.svg", alt: "Carl Zeiss" },
+  { src: "/images/client-lowes.svg", alt: "Lowe's" },
+  { src: "/images/client-paloalto.svg", alt: "Palo Alto" },
+  { src: "/images/client-nippon-india.svg", alt: "Nippon India" },
 ];
 
 export default function Home() {

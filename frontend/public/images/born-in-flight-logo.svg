@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="96" viewBox="0 0 220 96" role="img" aria-labelledby="title">
+  <title id="title">Born In Flight</title>
+  <g fill="none" stroke="#07111f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 29c18 1 31 8 42 22"/>
+    <path d="M19 36c16 0 28 5 39 15"/>
+    <path d="M23 43c14-1 25 2 36 9"/>
+    <path d="M67 51c12-13 26-20 43-23"/>
+    <path d="M67 51c13-7 27-10 43-10"/>
+    <path d="M67 51c13-2 25 0 37 5"/>
+    <path d="M60 52c-8 4-17 5-29 2"/>
+  </g>
+  <text x="58" y="58" fill="#07111f" font-family="Georgia, serif" font-size="23" font-weight="600">born</text>
+  <text x="112" y="58" fill="#07111f" font-family="Georgia, serif" font-size="18">in</text>
+  <text x="58" y="78" fill="#07111f" font-family="Georgia, serif" font-size="23" font-weight="600">flight</text>
+</svg>

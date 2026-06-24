@@ -24,7 +24,7 @@ const STATS = [
   { n: "93%", l: "Repeat client rate" },
 ];
 
-const PRAKASH_IMG = "https://customer-assets.emergentagent.com/job_transform-bif/artifacts/npyu298s_Prakash%20Rao.png";
+const PRAKASH_IMG = "/images/prakash-rao.png";
 const BOOK_LINKS = [
   { l: "Amazon India", u: "https://www.amazon.in/dp/B0GCFFPMYB" },
   { l: "Amazon Global", u: "https://www.amazon.com/dp/B0GCFFPMYB" },
