@@ -241,10 +241,24 @@ async def delete_testimonial(tid: str, _: bool = Depends(require_admin)):
 
 app.include_router(api_router)
 
+default_origins = [
+    "https://borninflight.com",
+    "https://www.borninflight.com",
+    "https://born-in-flight-7lbj.vercel.app",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
+env_origins = [
+    origin.strip()
+    for origin in os.environ.get("CORS_ORIGINS", "").split(",")
+    if origin.strip()
+]
+allowed_origins = sorted(set(default_origins + env_origins))
+
 app.add_middleware(
     CORSMiddleware,
     allow_credentials=True,
-    allow_origins=os.environ.get('CORS_ORIGINS', '*').split(','),
+    allow_origins=allowed_origins,
     allow_methods=["*"],
     allow_headers=["*"],
 )
